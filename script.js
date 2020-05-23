@@ -2,24 +2,24 @@
 
 
 $(function(){
+     alert('本ページはデザインのみを実装したサイトです。\n記載されているサービスは本ページでは行っておりません');
 
-
-    $('.faq-list-item').click(function() {
-  var $answer = $(this).find('.answer');
-  if($answer.hasClass('open')) {
+  $('.faq-list-item').click(function() {
+    var $answer = $(this).find('.answer');
+    if($answer.hasClass('open')) {
     $answer.removeClass('open');
     // slideUpメソッドを用いて、$answerを隠してください
     $answer.slideUp();
     $(this).find('span').html('<i class="fas fa-chevron-down"></i>');
     // 子要素のspanタグの中身をtextメソッドを用いて書き換えてください
-  } else {
+    } else {
     $answer.addClass('open');
     // slideDownメソッドを用いて、$answerを表示してください
     $answer.slideDown();
     $(this).find('span').html('<i class="fas fa-chevron-up"></i>');
     // 子要素のspanタグの中身をtextメソッドを用いて書き換えてください
-  }
-});
+    }
+  });
 
 $('.flow-list-item').click(function() {
 var $detail = $(this).find('.flow-list-detail');
